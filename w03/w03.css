@@ -1,0 +1,52 @@
+body {
+  background: #1a6fc3;
+  font-family: 'Times New Roman', Times, serif;
+}
+.card {
+  background-color: #203b55;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  max-width: 300px;
+  margin: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+}
+
+.card-1 {
+  border-color: #482736;
+}
+
+.card-2 {
+  border-color: #85b493;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.card-1 .icon {
+  background: #ff0000;
+}
+
+.card-2 .icon {
+  background: #1708f0;
+}
+
+.btn {
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  border: transparent;
+  border-radius: 0.5rem;
+  letter-spacing: 2px;
+}
+.btn-1 {
+  background-color: #f1bfd2;
+  color: #ee0420;
+}
+.btn-2 {
+  background-color: #f1bfd2;
+  color: #ee0420;
+}
