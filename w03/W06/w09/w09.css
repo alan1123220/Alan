@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f0f0f0;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid transparent; /* 預設透明，由各類別覆蓋 */
+}
+
+.card img.main {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 12px 0 8px;
+}
+
+.card p {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.card img.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card button {
+  border: 2px solid;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: auto;
+}
+
+/* 顏色配對：按鈕 & 卡片邊框 */
+.red {
+  background-color: red;
+  border-color: red;
+}
+.red-border {
+  border-color: red;
+}
+
+.blue {
+  background-color: blue;
+  border-color: blue;
+}
+.blue-border {
+  border-color: blue;
+}
+
+.green {
+  background-color: green;
+  border-color: green;
+}
+.green-border {
+  border-color: green;
+}
+
+.yellow {
+  background-color: goldenrod;
+  border-color: goldenrod;
+}
+.yellow-border {
+  border-color: goldenrod;
+}
