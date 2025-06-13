@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--grey-light);
+  color: var(--grey-dark);
+  font-size: 12px;
+}
+
+:root {
+  --article-width: 400px;
+  --fluid-width: 1000px;
+  --border-radius: 2rem;
+  --primary: rgb(8, 8, 8);
+  --letter-spacing: 10;
+  --primary-dark: rgb(44, 31, 225);
+
+  --grey-light: rgb(185, 174, 174);
+  --grey-dark: rgb(150, 134, 134);
+  --max-width: 500px;
+}
+
+/* 栅格布局 */
+.blogs-center {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 动态列宽 */
+  gap: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 默认 4 列 */
+  gap: 2rem;
+}
+
+img {
+  height: 12rem;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem;
+  letter-spacing: 2px;
+}
+
+.blog {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease-in-out all;
+}
+
+.blog-img {
+  border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
+}
+
+.blog-content {
+  padding-bottom: 1rem;
+}
+
+.blog-content span {
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: var(--letter-spacing);
+  font-weight: 500;
+}
+
+.blog-content h3 {
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  margin: 0.5rem 0;
+}
+
+.blog-content p {
+  color: var(--grey-dark);
+  margin-bottom: 0.5rem;
+}
+
+.blog-content a {
+  text-transform: capitalize;
+  color: var(--primary-dark);
+  letter-spacing: 1px;
+}
+
+/* 媒体查询控制每列的博客数量 */
+@media screen and (max-width: 1200px) {
+  .blogs-center {
+    grid-template-columns: repeat(3, 1fr); /* 1200px 屏幕宽度时显示三列 */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .blogs-center {
+    grid-template-columns: repeat(2, 1fr); /* 900px 屏幕宽度时显示两列 */
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    top: -150px;
+    scale: 0.8;
+  }
+
+  .blogs-center {
+    grid-template-columns: 1fr; /* 小屏幕下每行只显示一列 */
+  }
+}
+
